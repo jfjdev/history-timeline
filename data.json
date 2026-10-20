@@ -54,6 +54,16 @@
       "year": 2023,
       "notes": "Dates follow the Old Style (Julian) calendar used in Britain at the time, as in the book and contemporary accounts. Verified against Wikipedia (Wager Mutiny, HMS Wager, George Anson, John Byron, David Cheap, War of Jenkins' Ear) and The Mariner's Mirror.",
       "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "dracula",
+      "title": "Dracula",
+      "type": "book",
+      "author": "Bram Stoker",
+      "year": 1897,
+      "notes": "Joe finished reading in October 2026",
+      "readFinished": "2026-10",
+      "dateAdded": "2026-10-20"
     }
   ],
   "events": [
@@ -759,6 +769,262 @@
         "David Grann"
       ],
       "location": "",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "vlad-iii-life",
+      "title": "Life of Vlad III 'Dracula' (the Impaler)",
+      "start": "1431",
+      "end": "1477-01",
+      "datePrecision": "year",
+      "approx": true,
+      "category": "leaders",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Prince of Wallachia, son of Vlad II Dracul (hence 'Dracula', son of the Dragon). Born between 1428 and 1431; died December 1476 or January 1477. Stoker borrowed the name, but how far Vlad inspired the Count is disputed.",
+      "people": [
+        "Vlad III"
+      ],
+      "location": "Wallachia (Romania)",
+      "dateAdded": "2026-10-20",
+      "lifespan": true
+    },
+    {
+      "id": "vlad-iii-reign",
+      "title": "Vlad III's main reign in Wallachia",
+      "start": "1456-08-20",
+      "end": "1462-07",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "leaders",
+      "sources": [
+        "dracula"
+      ],
+      "description": "His longest reign (he also ruled briefly in 1448 and in 1475–76), notorious for mass impalements.",
+      "people": [
+        "Vlad III"
+      ],
+      "location": "Wallachia (Romania)",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-life",
+      "title": "Bram Stoker's life",
+      "start": "1847-11-08",
+      "end": "1912-04-20",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "people",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Born Abraham Stoker in Clontarf, Dublin; bedridden with illness for his first seven years. Died in London on 20 April 1912, aged 64.",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "Dublin → London",
+      "dateAdded": "2026-10-20",
+      "lifespan": true
+    },
+    {
+      "id": "stoker-trinity",
+      "title": "Stoker studies at Trinity College Dublin",
+      "start": "1864",
+      "end": "1870",
+      "datePrecision": "year",
+      "approx": false,
+      "category": "people",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Champion university athlete; president of the Philosophical Society and auditor of the Historical Society. Graduated BA in 1870.",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "Trinity College Dublin",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-dublin-castle",
+      "title": "Civil servant at Dublin Castle & theatre critic",
+      "start": "1870",
+      "end": "1878",
+      "datePrecision": "year",
+      "approx": true,
+      "category": "people",
+      "sources": [
+        "dracula"
+      ],
+      "description": "About ten years as an Irish civil servant (he wrote 'The Duties of Clerks of Petty Sessions in Ireland'). In his spare time he was an unpaid drama critic for the Dublin Evening Mail, co-owned by the Gothic writer Sheridan Le Fanu.",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "Dublin Castle",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-meets-irving",
+      "title": "Stoker meets Henry Irving",
+      "start": "1876-12",
+      "datePrecision": "month",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "After Stoker's glowing review of Irving's Hamlet at the Theatre Royal, Dublin, Irving invites him to dinner at the Shelbourne Hotel. Their friendship shapes the rest of Stoker's life, and Irving is widely seen as one inspiration for the Count.",
+      "people": [
+        "Bram Stoker",
+        "Henry Irving"
+      ],
+      "location": "Dublin",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-marriage",
+      "title": "Stoker marries Florence Balcombe",
+      "start": "1878-12",
+      "datePrecision": "month",
+      "approx": false,
+      "category": "people",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Married in Dublin; Florence had previously been courted by Oscar Wilde. Their only child, Irving Noel Thornley Stoker, was born on 31 December 1879.",
+      "people": [
+        "Bram Stoker",
+        "Florence Balcombe",
+        "Oscar Wilde"
+      ],
+      "location": "Dublin",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-to-london",
+      "title": "The Stokers move to London",
+      "start": "1878-12",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "people",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Stoker leaves the civil service to join Irving, who had taken over the Lyceum Theatre (management from 31 August 1878; reopened 30 December 1878).",
+      "people": [
+        "Bram Stoker",
+        "Florence Balcombe"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-lyceum",
+      "title": "Stoker manages the Lyceum for Henry Irving",
+      "start": "1878-12",
+      "end": "1905-10-13",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Acting manager, then business manager of the Lyceum and Irving's personal assistant for 27 years, touring America with him (and meeting Presidents McKinley and Theodore Roosevelt). Irving left the Lyceum in 1902; Stoker worked for him until Irving's death in 1905.",
+      "people": [
+        "Bram Stoker",
+        "Henry Irving",
+        "Ellen Terry"
+      ],
+      "location": "Lyceum Theatre, London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "dracula-writing",
+      "title": "Stoker researches & writes Dracula",
+      "start": "1890-03-08",
+      "end": "1897-05-26",
+      "datePrecision": "day",
+      "approx": true,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "His earliest dated notes (an outline of the opening) are from 8 March 1890. Over seven years he filled more than 100 pages of notes on folklore and history, researched in Whitby, the British Museum and the London Library, and started the main writing at Cruden Bay, Scotland, in 1895.",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "London, Whitby, Cruden Bay",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "stoker-whitby",
+      "title": "Whitby holiday: finding the name 'Dracula'",
+      "start": "1890-08",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Staying at 6 Royal Crescent, Stoker reads William Wilkinson's 1820 history of Wallachia and Moldavia in the town library and notes that 'Dracula means devil'. Whitby becomes where the Count comes ashore. (He also had access to the book in London libraries.)",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "Whitby, Yorkshire",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "dracula-published",
+      "title": "Dracula published",
+      "start": "1897-05-26",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "Published by Archibald Constable and Company in London. The exact date is uncertain, but Stoker wrote to Gladstone that it would come out on the 26th.",
+      "people": [
+        "Bram Stoker"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "irving-dies",
+      "title": "Henry Irving dies",
+      "start": "1905-10-13",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "The great Victorian actor dies on tour in Bradford. Stoker publishes 'Personal Reminiscences of Henry Irving' in 1906.",
+      "people": [
+        "Henry Irving",
+        "Bram Stoker"
+      ],
+      "location": "Bradford, England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "nosferatu",
+      "title": "Nosferatu premieres",
+      "start": "1922-03-04",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "dracula"
+      ],
+      "description": "F. W. Murnau's unauthorised film adaptation of Dracula. It invented the idea that sunlight kills vampires. Florence Stoker sued, and a court ordered all copies destroyed (some survived).",
+      "people": [
+        "F. W. Murnau",
+        "Max Schreck",
+        "Florence Balcombe"
+      ],
+      "location": "Berlin, Germany",
       "dateAdded": "2026-10-20"
     }
   ]

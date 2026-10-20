@@ -56,6 +56,7 @@ header{height:var(--hdr);flex:0 0 auto;display:flex;align-items:center;gap:12px;
 .src .ic{font-size:16px;line-height:20px}
 .src .t{font-size:13px;font-weight:600;line-height:1.3}
 .src .m{font-size:11.5px;color:var(--muted);margin-top:2px}
+.src .m.fin{color:#6fe3c6}
 .seg{display:flex;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:9px;padding:3px;margin-top:8px}
 .seg button{flex:1;border:0;background:transparent;color:var(--muted);font-size:12px;font-weight:600;padding:6px;border-radius:6px;cursor:pointer}
 .seg button.on{background:rgba(255,255,255,.1);color:var(--text)}
@@ -267,7 +268,7 @@ EVENTS.sort((a,b)=>a.s-b.s);
 const EV={}; EVENTS.forEach(e=>EV[e.id]=e);
 function dateLabel(e){ const p=e.prec; let s=fmtDate(e.sd,p); if(e.ed) s+=' – '+fmtDate(e.ed,e.ed.d?p:(e.ed.m?'month':'year')); return (e.approx?'c. ':'')+s; }
 function shortDate(e){ let s=fmtShort(e.sd,e.prec); if(e.ed) s+=' – '+fmtShort(e.ed, e.ed.d?e.prec:(e.ed.m?'month':'year')); return (e.approx?'c. ':'')+s; }
-function spanLen(e){ if(!e.ed) return null; const exact=e.prec==='day'&&e.sd.d&&e.ed.d; return (e.approx||!exact?'about ':'')+humanDiff(exact?e.sd:null,exact?e.ed:null,e.e-e.s); }
+function spanLen(e){ if(!e.ed) return null; const exact=!e.approx&&e.prec==='day'&&e.sd.d&&e.ed.d; return (e.approx||!exact?'about ':'')+humanDiff(exact?e.sd:null,exact?e.ed:null,e.e-e.s); }
 
 /* ---------------- state ---------------- */
 const LS='joeTimeline.v1';
@@ -661,7 +662,7 @@ function duringList(e){
   const out=[]; EVENTS.forEach(o=>{ if(o===e||!o.isSpan) return; if(o.s<=e.s+1e-9&&o.e>=e.s-1e-9&&!(o.s===e.s&&o.e===e.e)){
     const same=o.sources.some(s=>e.sources.includes(s)); let txt;
     if(o.lifespan){ const age=Math.floor(e.s-o.s+1e-6); const nm=(o.people&&o.people[0])||o.title.replace(/'s life$/,''); txt=`<b>${esc(nm)}</b> was ${age<1?'a baby':age+' years old'}`; }
-    else { const into=e.s-o.s; txt=into<1/YLEN?`Start of <b>${esc(o.title)}</b>`:`${esc(humanYears(into))} into <b>${esc(o.title)}</b> <span style="color:var(--faint)">(of ${esc(spanLen(o))})</span>`; }
+    else { const into=e.s-o.s; txt=(o.e-e.s)<1.5/YLEN?`End of <b>${esc(o.title)}</b> <span style="color:var(--faint)">(after ${esc(spanLen(o))})</span>`:into<1/YLEN?`Start of <b>${esc(o.title)}</b>`:`${esc(humanYears(into))} into <b>${esc(o.title)}</b> <span style="color:var(--faint)">(of ${esc(spanLen(o))})</span>`; }
     out.push({same,txt,id:o.id,lif:!!o.lifespan}); } });
   out.sort((a,b)=>(b.same-a.same)||(b.lif-a.lif)); if(!out.length) return '';
   return `<h3>At that moment…</h3><div class="rel">`+out.slice(0,6).map(x=>`<div class="relitem" data-ev="${esc(x.id)}"><span>${x.txt}</span></div>`).join('')+'</div>';
@@ -672,7 +673,7 @@ function renderDetail(e){
   let cards=`<div class="card ${len?'':'wide'}"><div class="k">How long ago</div><div class="v">${esc(ago)}</div>${ex?`<div class="s">${esc(ex)}</div>`:''}</div>`;
   if(len) cards+=`<div class="card"><div class="k">Lasted</div><div class="v">${esc(len)}</div><div class="s">ended ${esc(endAgo)}</div></div>`;
   if(st.birth){ const b=dec({y:+st.birth}); const d=b-e.s; if(d>0) cards+=`<div class="card wide"><div class="k">Compared with you</div><div class="v">${esc(humanYears(d))} before you were born</div><div class="s">${(d/(NOW-b)).toFixed(1).replace('.0','')}× your age so far</div></div>`; }
-  const srcs=e.sources.map(id=>{const s=SRC[id]; return `<span class="srctag" data-src="${esc(id)}">${s?typeIcon(s.type):'📎'} ${esc(s?s.title:id)}</span>`;}).join('');
+  const srcs=e.sources.map(id=>{const s=SRC[id]; return `<span class="srctag" data-src="${esc(id)}" title="${esc(s&&s.notes||'')}">${s?typeIcon(s.type):'📎'} ${esc(s?s.title:id)}${s&&s.author?` <span style="color:var(--muted);font-weight:500">· ${esc(s.author)}</span>`:''}${s&&s.readFinished?` <span style="color:#6fe3c6;font-weight:500">· finished ${esc(fmtYM(s.readFinished))}</span>`:''}</span>`;}).join('');
   $('#dbody').innerHTML=`
    <div class="dcat" style="color:${e.c.color}"><i style="background:${e.c.color}"></i>${esc(e.c.name)}${e.isSpan?' · span':''}</div>
    <div class="dtitle">${esc(e.title)}</div>
@@ -687,6 +688,7 @@ function renderDetail(e){
   $('#dbody').scrollTop=0; detail.scrollTop=0;
   $('#dZoom').onclick=()=>zoomToEvent(e);
 }
+function fmtYM(v){ const o=parseDate(v); return o?fmtDate(o):String(v); }
 function typeIcon(t){return {book:'📖',documentary:'🎬',article:'📰'}[t]||'📎';}
 detail.addEventListener('click',ev=>{ const r=ev.target.closest('[data-ev]'); if(r){ select(r.dataset.ev,{fly:true}); return; }
   const s=ev.target.closest('[data-src]'); if(s){ setSource(s.dataset.src,true); st.srcMode='only'; save(); renderFilters(); } });
@@ -699,14 +701,14 @@ function renderFilters(){
   let h=`<div class="src ${st.source?'':'on'}" data-s=""><span class="ic">🗺️</span><div><div class="t">Everything</div><div class="m">${total} events from ${(D.sources||[]).length} sources</div></div></div>`;
   (D.sources||[]).slice().sort((a,b)=>(b.dateAdded||'').localeCompare(a.dateAdded||'')||a.title.localeCompare(b.title)).forEach(s=>{
     const n=EVENTS.filter(e=>e.sources.includes(s.id)).length;
-    h+=`<div class="src ${st.source===s.id?'on':''}" data-s="${esc(s.id)}"><span class="ic">${typeIcon(s.type)}</span><div><div class="t">${esc(s.title)}</div><div class="m">${esc([s.author,s.year,s.type].filter(Boolean).join(' · '))} · ${n} event${n===1?'':'s'}</div></div></div>`; });
+    h+=`<div class="src ${st.source===s.id?'on':''}" data-s="${esc(s.id)}"><span class="ic">${typeIcon(s.type)}</span><div><div class="t">${esc(s.title)}</div><div class="m">${esc([s.author,s.year,s.type].filter(Boolean).join(' · '))} · ${n} event${n===1?'':'s'}</div>${s.readFinished?`<div class="m fin">✓ Finished ${esc(fmtYM(s.readFinished))}</div>`:''}${st.source===s.id&&s.notes?`<div class="m" style="margin-top:5px;color:#b9c0dc">${esc(s.notes)}</div>`:''}</div></div>`; });
   $('#srclist').innerHTML=h;
   $('#srcmode').style.display=st.source?'flex':'none';
   [...$('#srcmode').children].forEach(b=>b.classList.toggle('on',b.dataset.m===st.srcMode));
   const cnt=counts();
   $('#cats').innerHTML=CATS.map(c=>`<span class="chip ${st.catsOff.has(c.id)?'off':''}" data-c="${esc(c.id)}"><i style="background:${c.color};box-shadow:0 0 8px ${c.color}"></i>${esc(c.name)} <span class="n">${cnt[c.id]||0}</span></span>`).join('');
   $('#tEras').checked=st.eras; $('#tLife').checked=st.life; $('#birth').value=st.birth||'';
-  const s=st.source&&SRC[st.source]; $('#subtitle').textContent=s?`${typeIcon(s.type)} ${s.title}`:`${EVENTS.length} events · ${(D.sources||[]).length} sources`;
+  const s=st.source&&SRC[st.source]; $('#subtitle').textContent=s?`${typeIcon(s.type)} ${s.title}${s.author?' · '+s.author:''}${s.readFinished?' · finished '+fmtYM(s.readFinished):''}`:`${EVENTS.length} events · ${(D.sources||[]).length} sources`;
   if(st.q){ const n=EVENTS.filter(e=>isVisible(e)&&qMatch(e)).length; $('#qhint').textContent=`${n} match${n===1?'':'es'} · press Enter to zoom to them`; } else $('#qhint').textContent='Matching events glow; press Enter to zoom to them.';
 }
 function setSource(id,fly){ st.source=id||null; const h=st.source?'#source='+encodeURIComponent(st.source):' ';

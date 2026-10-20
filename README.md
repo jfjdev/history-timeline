@@ -20,7 +20,7 @@ Append to `sources`:
 {"id":"the-wager","title":"The Wager: A Tale of Shipwreck, Mutiny and Murder","type":"book",
  "author":"David Grann","year":2023,"notes":"","dateAdded":"2026-10-20"}
 ```
-`type` is one of `book | documentary | article | other`. `id` is a lowercase slug; it is used in links (`timeline.html#source=the-wager`).
+`type` is one of `book | documentary | article | other`. Optional: `"readFinished":"2026-10"` (YYYY, YYYY-MM or YYYY-MM-DD), the date Joe finished the book or watched the documentary. It shows as "✓ Finished October 2026" in the source list, the header and the event detail panel. `id` is a lowercase slug; it is used in links (`timeline.html#source=the-wager`).
 
 ## Add an event
 Append to `events`:

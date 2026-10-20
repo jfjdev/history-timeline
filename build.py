@@ -24,6 +24,8 @@ def validate(d):
     for s in d.get("sources", []):
         if s.get("type") not in TYPES:
             warns.append(f"source {s['id']}: type '{s.get('type')}' not one of {sorted(TYPES)}")
+        if s.get("readFinished") and not DATE_RE.match(str(s["readFinished"])):
+            errs.append(f"source {s['id']}: bad readFinished '{s['readFinished']}'")
     seen = set()
     for e in d.get("events", []):
         eid = e.get("id", "?")
