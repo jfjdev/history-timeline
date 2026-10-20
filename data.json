@@ -1,0 +1,765 @@
+{
+  "categories": [
+    {
+      "id": "politics",
+      "name": "Politics",
+      "color": "#5b8cff"
+    },
+    {
+      "id": "science",
+      "name": "Science & Tech",
+      "color": "#2ed3b7"
+    },
+    {
+      "id": "leaders",
+      "name": "Leaders",
+      "color": "#f5b942"
+    },
+    {
+      "id": "people",
+      "name": "Famous People",
+      "color": "#ff7eb6"
+    },
+    {
+      "id": "war",
+      "name": "War & Conflict",
+      "color": "#ff5a5a"
+    },
+    {
+      "id": "culture",
+      "name": "Culture & Arts",
+      "color": "#b18cff"
+    },
+    {
+      "id": "exploration",
+      "name": "Exploration",
+      "color": "#4fc3f7"
+    }
+  ],
+  "sources": [
+    {
+      "id": "example-events",
+      "title": "Example events (delete me)",
+      "type": "other",
+      "author": "Timeline demo",
+      "year": null,
+      "notes": "Demo data so the visuals can be judged. Safe to delete this source and its events.",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "the-wager",
+      "title": "The Wager: A Tale of Shipwreck, Mutiny and Murder",
+      "type": "book",
+      "author": "David Grann",
+      "year": 2023,
+      "notes": "Dates follow the Old Style (Julian) calendar used in Britain at the time, as in the book and contemporary accounts. Verified against Wikipedia (Wager Mutiny, HMS Wager, George Anson, John Byron, David Cheap, War of Jenkins' Ear) and The Mariner's Mirror.",
+      "dateAdded": "2026-10-20"
+    }
+  ],
+  "events": [
+    {
+      "id": "great-pyramid",
+      "title": "Great Pyramid of Giza completed",
+      "start": "-2560",
+      "datePrecision": "year",
+      "approx": true,
+      "category": "culture",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Built for the pharaoh Khufu; the tallest human-made structure on Earth for nearly 4,000 years.",
+      "people": [
+        "Khufu"
+      ],
+      "location": "Giza, Egypt",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "fall-of-rome",
+      "title": "Fall of the Western Roman Empire",
+      "start": "476",
+      "datePrecision": "year",
+      "approx": false,
+      "category": "politics",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Odoacer deposes Romulus Augustulus, the last Western Roman emperor. Traditionally marks the end of antiquity.",
+      "people": [
+        "Odoacer",
+        "Romulus Augustulus"
+      ],
+      "location": "Ravenna, Italy",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "magna-carta",
+      "title": "Magna Carta sealed",
+      "start": "1215-06-15",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "politics",
+      "sources": [
+        "example-events"
+      ],
+      "description": "King John agrees to the charter at Runnymede, limiting royal power.",
+      "people": [
+        "King John"
+      ],
+      "location": "Runnymede, England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "columbus-1492",
+      "title": "Columbus's first voyage",
+      "start": "1492-08-03",
+      "end": "1493-03-15",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Sails from Palos de la Frontera, reaches the Bahamas on 12 October 1492 and returns to Spain in March 1493.",
+      "people": [
+        "Christopher Columbus"
+      ],
+      "location": "Atlantic Ocean",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "elizabeth-i-reign",
+      "title": "Reign of Elizabeth I",
+      "start": "1558-11-17",
+      "end": "1603-03-24",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "leaders",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Queen of England and Ireland until her death; the Elizabethan era.",
+      "people": [
+        "Elizabeth I"
+      ],
+      "location": "England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "shakespeare-life",
+      "title": "William Shakespeare's life",
+      "start": "1564-04",
+      "end": "1616-04-23",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "people",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Baptised 26 April 1564 in Stratford-upon-Avon (exact birth date unknown); died 23 April 1616.",
+      "people": [
+        "William Shakespeare"
+      ],
+      "location": "Stratford-upon-Avon / London",
+      "dateAdded": "2026-10-20",
+      "lifespan": true
+    },
+    {
+      "id": "origin-of-species",
+      "title": "On the Origin of Species published",
+      "start": "1859-11-24",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "science",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Charles Darwin publishes his theory of evolution by natural selection.",
+      "people": [
+        "Charles Darwin"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "ww2",
+      "title": "Second World War",
+      "start": "1939-09-01",
+      "end": "1945-09-02",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "war",
+      "sources": [
+        "example-events"
+      ],
+      "description": "From Germany's invasion of Poland to Japan's formal surrender.",
+      "people": [],
+      "location": "Worldwide",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "moon-landing",
+      "title": "Apollo 11 Moon landing",
+      "start": "1969-07-20",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "science",
+      "sources": [
+        "example-events"
+      ],
+      "description": "Neil Armstrong and Buzz Aldrin become the first people to walk on the Moon.",
+      "people": [
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Michael Collins"
+      ],
+      "location": "Sea of Tranquility, Moon",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "anson-life",
+      "title": "George Anson's life",
+      "start": "1697-04-23",
+      "end": "1762-06-06",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "leaders",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Commodore of the 1740 squadron; later Admiral and First Lord of the Admiralty. Died 6 June 1762.",
+      "people": [
+        "George Anson"
+      ],
+      "location": "",
+      "dateAdded": "2026-10-20",
+      "lifespan": true
+    },
+    {
+      "id": "byron-life",
+      "title": "John Byron's life",
+      "start": "1723-11-08",
+      "end": "1786-04-10",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "people",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Midshipman on the Wager, aged 17 when it sailed. Later Vice-Admiral, nicknamed 'Foul-Weather Jack'; grandfather of the poet Lord Byron. Died 10 April 1786.",
+      "people": [
+        "John Byron"
+      ],
+      "location": "",
+      "dateAdded": "2026-10-20",
+      "lifespan": true
+    },
+    {
+      "id": "jenkins-ear",
+      "title": "Robert Jenkins's ear cut off",
+      "start": "1731-04",
+      "datePrecision": "month",
+      "approx": false,
+      "category": "politics",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "A Spanish coastguard captain allegedly severs the ear of British captain Robert Jenkins while searching his brig Rebecca for contraband. Produced in Parliament in 1738, it became a pretext for war.",
+      "people": [
+        "Robert Jenkins",
+        "Julio León Fandiño"
+      ],
+      "location": "Off Havana, Caribbean",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "war-jenkins-ear",
+      "title": "War of Jenkins' Ear",
+      "start": "1739-10-23",
+      "end": "1748-10-18",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "war",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Britain formally declares war on Spain (George II decided on 15 June; ratified 23 October 1739). Anson's squadron was sent to raid Spain's Pacific empire. The war merged into the War of the Austrian Succession, ended by the Treaty of Aix-la-Chapelle in October 1748.",
+      "people": [
+        "George II",
+        "Robert Walpole"
+      ],
+      "location": "Caribbean & Pacific",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "anson-voyage",
+      "title": "Anson's voyage round the world",
+      "start": "1740-09-18",
+      "end": "1744-06-15",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Six warships and two supply ships (about 1,850 men) leave St Helens off Portsmouth. Only the Centurion completed the circumnavigation; most of the men died, chiefly of scurvy.",
+      "people": [
+        "George Anson"
+      ],
+      "location": "Worldwide",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "anson-departs",
+      "title": "Anson's squadron sets sail",
+      "start": "1740-09-18",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "The squadron, including the Wager (a converted East Indiaman carrying stores and siege guns), departs from St Helens, Isle of Wight, after months of delays.",
+      "people": [
+        "George Anson",
+        "Dandy Kidd",
+        "David Cheap",
+        "John Byron",
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "St Helens, Isle of Wight",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "rounding-cape-horn",
+      "title": "Rounding Cape Horn",
+      "start": "1741-03-07",
+      "end": "1741-04",
+      "datePrecision": "day",
+      "approx": true,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "The squadron passes through the Strait of Le Maire on 7 March 1741 and spends weeks battling storms west around the Horn. Scurvy rages; the Wager, now under David Cheap after Captain Dandy Kidd's death, loses contact with the others.",
+      "people": [
+        "George Anson",
+        "David Cheap"
+      ],
+      "location": "Cape Horn",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "wager-wrecked",
+      "title": "The Wager is wrecked",
+      "start": "1741-05-14",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "In the early hours the Wager strikes rocks in the Gulf of Penas and runs aground on what becomes Wager Island, Patagonia. About 145 men reach shore.",
+      "people": [
+        "David Cheap",
+        "John Bulkeley",
+        "John Cummins",
+        "John Byron"
+      ],
+      "location": "Wager Island, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "castaways",
+      "title": "Castaways on Wager Island",
+      "start": "1741-05-14",
+      "end": "1741-10-13",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Five months of starvation, cold, theft and violence. The mutineers left on 13 October 1741; Cheap's loyal group remained into early 1742.",
+      "people": [
+        "David Cheap",
+        "John Bulkeley",
+        "John Cummins",
+        "John Byron"
+      ],
+      "location": "Wager Island, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "cozens-shot",
+      "title": "Captain Cheap shoots Midshipman Cozens",
+      "start": "1741-06-10",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "war",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "During a quarrel over wine, Cheap rushes out of his hut and shoots Henry Cozens in the face without warning. Cozens dies on 24 June. The killing turns many men against Cheap.",
+      "people": [
+        "David Cheap",
+        "Henry Cozens"
+      ],
+      "location": "Wager Island, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "mutiny",
+      "title": "Mutiny: Cheap seized and bound",
+      "start": "1741-10-09",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "war",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Armed seamen enter Cheap's hut, bind him, and declare him a prisoner to be taken to England for trial over Cozens's death. Bulkeley's plan to go south via the Strait of Magellan wins out.",
+      "people": [
+        "David Cheap",
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "Wager Island, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "speedwell-voyage",
+      "title": "Voyage of the Speedwell",
+      "start": "1741-10-13",
+      "end": "1742-01-28",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Bulkeley and Cummins lead 81 men in the lengthened longboat Speedwell plus the cutter and barge, south through the Strait of Magellan and up the Atlantic coast: over 2,000 miles in about 15 weeks. Only 30 reach Brazil. (Some accounts give 14 October for departure.)",
+      "people": [
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "Strait of Magellan & Atlantic coast",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "rio-grande",
+      "title": "Speedwell reaches Rio Grande, Brazil",
+      "start": "1742-01-28",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "The emaciated survivors arrive at the Portuguese outpost of Rio Grande. Their story of a shipwreck reaches Britain long before Cheap's.",
+      "people": [
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "Rio Grande, Brazil",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "mutineers-home",
+      "title": "Mutineers' journey home",
+      "start": "1742-01-28",
+      "end": "1743-01-01",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "From Rio Grande to Rio de Janeiro, Bahia and Lisbon, then aboard HMS Stirling Castle to Spithead, arriving on New Year's Day 1743.",
+      "people": [
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "Brazil → Lisbon → Spithead",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "bulkeley-book",
+      "title": "Bulkeley & Cummins publish their journal",
+      "start": "1743",
+      "datePrecision": "year",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "'A Voyage to the South-Seas, in the Years 1740-1' gives the mutineers' version of events before Cheap can return.",
+      "people": [
+        "John Bulkeley",
+        "John Cummins"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "cheap-barge-attempt",
+      "title": "Cheap's party fails to escape north",
+      "start": "1741-12",
+      "end": "1742-02",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Around the December solstice, Cheap, Byron and others try to row north in the barge and yawl. The yawl is lost, four marines are left ashore, and the starving men return to Wager Island about two months later.",
+      "people": [
+        "David Cheap",
+        "John Byron",
+        "Alexander Campbell",
+        "Thomas Hamilton"
+      ],
+      "location": "Gulf of Penas, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "chono-journey",
+      "title": "Chono guide leads Cheap's party north",
+      "start": "1742-03",
+      "end": "1742-06",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Chono people led by Martín Olleta guide the survivors north to Chiloé. The ordeal takes about four months; only Cheap, Byron, Campbell and Hamilton survive.",
+      "people": [
+        "David Cheap",
+        "John Byron",
+        "Alexander Campbell",
+        "Thomas Hamilton",
+        "Martín Olleta"
+      ],
+      "location": "Patagonia → Chiloé, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "chile-captivity",
+      "title": "Cheap's group held captive in Chile",
+      "start": "1742-06",
+      "end": "1744-12-20",
+      "datePrecision": "month",
+      "approx": true,
+      "category": "war",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Prisoners of the Spanish, first at Chacao on Chiloé, then (from January 1743) in Santiago and Valparaíso, where Byron and Campbell are jailed for a time.",
+      "people": [
+        "David Cheap",
+        "John Byron",
+        "Alexander Campbell",
+        "Thomas Hamilton"
+      ],
+      "location": "Chiloé & Santiago, Chile",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "covadonga",
+      "title": "Anson captures the Manila galleon",
+      "start": "1743-06-20",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "war",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "HMS Centurion takes the Nuestra Señora de Covadonga off Cape Espiritu Santo in the Philippines, seizing over 1.3 million pieces of eight: one of the richest prizes ever.",
+      "people": [
+        "George Anson"
+      ],
+      "location": "Cape Espiritu Santo, Philippines",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "anson-returns",
+      "title": "Anson returns to England a hero",
+      "start": "1744-06-15",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "leaders",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Centurion anchors at Spithead after nearly four years. The treasure is paraded through London in 32 wagons.",
+      "people": [
+        "George Anson"
+      ],
+      "location": "Spithead, England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "lys-voyage",
+      "title": "Cheap, Byron & Hamilton sail home",
+      "start": "1744-12-20",
+      "end": "1746-04",
+      "datePrecision": "day",
+      "approx": true,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "They embark on the French ship Lys; after a leak forces a return, she sails for Europe on 1 March 1745, reaching Brest around late October 1745. They reach England in spring 1746.",
+      "people": [
+        "David Cheap",
+        "John Byron",
+        "Thomas Hamilton"
+      ],
+      "location": "Valparaíso → Brest → England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "court-martial",
+      "title": "Court martial over the loss of the Wager",
+      "start": "1746-04-15",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "politics",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Held aboard HMS Prince George at Spithead. The court looks only at the loss of the ship, not the mutiny or Cozens's death; nobody is convicted of mutiny and Lieutenant Baynes is reprimanded.",
+      "people": [
+        "David Cheap",
+        "John Bulkeley",
+        "John Cummins",
+        "John Byron",
+        "Robert Baynes"
+      ],
+      "location": "Spithead, England",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "campbell-sequel",
+      "title": "Campbell publishes 'The Sequel'",
+      "start": "1747",
+      "datePrecision": "year",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Alexander Campbell's account of Cheap's group, hostile to Cheap.",
+      "people": [
+        "Alexander Campbell"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "anson-first-lord",
+      "title": "Anson becomes First Lord of the Admiralty",
+      "start": "1751-06",
+      "datePrecision": "month",
+      "approx": false,
+      "category": "politics",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Anson goes on to reform the Royal Navy, including its Articles of War.",
+      "people": [
+        "George Anson"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "cheap-dies",
+      "title": "David Cheap dies",
+      "start": "1752-07-21",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "people",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Cheap had been promoted to post captain and married in 1748 after capturing a valuable prize.",
+      "people": [
+        "David Cheap"
+      ],
+      "location": "",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "byron-dolphin",
+      "title": "Byron's own circumnavigation (HMS Dolphin)",
+      "start": "1764-06",
+      "end": "1766-05",
+      "datePrecision": "month",
+      "approx": false,
+      "category": "exploration",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Byron, now a commodore, sails round the world in under two years, the fastest yet.",
+      "people": [
+        "John Byron"
+      ],
+      "location": "Worldwide",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "byron-narrative",
+      "title": "Byron publishes his Narrative",
+      "start": "1768",
+      "datePrecision": "year",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "'The Narrative of the Honourable John Byron', his account of the wreck and his ordeal, published 27 years later.",
+      "people": [
+        "John Byron"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "lord-byron-born",
+      "title": "Grandson Lord Byron (the poet) born",
+      "start": "1788-01-22",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "George Gordon Byron drew on his grandfather's Narrative for the shipwreck in Don Juan.",
+      "people": [
+        "Lord Byron"
+      ],
+      "location": "London",
+      "dateAdded": "2026-10-20"
+    },
+    {
+      "id": "grann-book",
+      "title": "David Grann publishes The Wager",
+      "start": "2023-04-18",
+      "datePrecision": "day",
+      "approx": false,
+      "category": "culture",
+      "sources": [
+        "the-wager"
+      ],
+      "description": "Grann's history of the Wager, based on the survivors' accounts and archives.",
+      "people": [
+        "David Grann"
+      ],
+      "location": "",
+      "dateAdded": "2026-10-20"
+    }
+  ]
+}
